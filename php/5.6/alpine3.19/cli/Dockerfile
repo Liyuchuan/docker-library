@@ -96,6 +96,7 @@ RUN set -xe \
 		openssl-dev \
 		libxml2-dev \
 		sqlite-dev \
+		gettext-dev \
 # install lower version openssl
 	&& curl -LO https://github.com/openssl/openssl/releases/download/OpenSSL_1_0_2u/openssl-1.0.2u.tar.gz \
 	&& tar -zxf openssl-1.0.2u.tar.gz  \
@@ -139,6 +140,7 @@ RUN set -xe \
 		--with-libedit \
 		--with-openssl=/usr/local/openssl-1.0.2 \
 		--with-zlib \
+		--with-gettext \
 		\
 # bundled pcre does not support JIT on s390x
 # https://manpages.debian.org/stretch/libpcre3-dev/pcrejit.3.en.html#AVAILABILITY_OF_JIT_SUPPORT
