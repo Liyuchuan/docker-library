@@ -8,4 +8,5 @@ RUN apk add --no-cache \
     libpng-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd \
-    && apk del --no-cache freetype-dev libjpeg-turbo-dev libpng-dev
+    && apk del --no-cache freetype-dev libjpeg-turbo-dev libpng-dev \
+    && apk add --no-cache git
